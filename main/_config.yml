@@ -103,10 +103,10 @@ theme: jelly
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ftpsync
-  host: ftpserver # ftp服务器地址
-  user: ftpusername # ftp用户名
-  pass: xxxx # 你的ftp用户密码
-  remote: xxx # 你要上传到的地址，例如/wwwroot
+  host: 004.3vftp.cn # ftp服务器地址
+  user: ganyz # ftp用户名
+  pass: ganyz123456 # 你的ftp用户密码
+  remote: / # 你要上传到的地址，例如/wwwroot
   port: 21 # ftp端口，不同的ftp可能会不一样
   delete: true # 上传本地文件是否删除ftp中的所有文件
   verbose: true # 是否打印调试信息
