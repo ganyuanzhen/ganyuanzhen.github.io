@@ -35,7 +35,7 @@ open_in_new: false
 favicon: /img/favicon.ico
 
 # your avatar's url
-avatar: 
+avatar: /img/avater.gif
 
 # NetEase Cloud Music (wangyiyun of course)
 music:
