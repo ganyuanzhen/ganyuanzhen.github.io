@@ -1,7 +1,7 @@
 # Header
 menu:
   Home: /
-  Archives: /archives
+  Archives: /archives/index.html
 
 # links with icon in the left-column bar
 subnav:
