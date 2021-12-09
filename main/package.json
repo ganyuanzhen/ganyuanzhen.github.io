@@ -14,7 +14,7 @@
   "dependencies": {
     "hexo": "^5.0.0",
     "hexo-cli": "^4.3.0",
-    "hexo-deployer-ftpsync": "git+git@codeup.aliyun.com:61b0b1875676a35a3b7db451/hexo-deployer-ftpsync.git",
+    "hexo-deployer-ftpsync": "git+https://codeup.aliyun.com/61b0b1875676a35a3b7db451/hexo-deployer-ftpsync.git",
     "hexo-generator-archive": "^1.0.0",
     "hexo-generator-category": "^1.0.0",
     "hexo-generator-index": "^2.0.0",
