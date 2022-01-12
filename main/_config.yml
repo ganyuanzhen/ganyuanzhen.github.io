@@ -135,7 +135,7 @@ deploy:
   host: myhomeqinyn.f3322.net # ftp服务器地址
   user: www  # ftp用户名
   pass: Ganyz123456 # 你的ftp用户密码
-  remote: / # 你要上传到的地址，例如/wwwroot
+  remote: /MyBlog # 你要上传到的地址，例如/wwwroot
   port: 21 # ftp端口，不同的ftp可能会不一样
   verbose: false # 是否打印调试信息
   ignore_errors: true # 是否忽略错误
