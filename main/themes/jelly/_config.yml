@@ -2,7 +2,6 @@
 menu:
   Home: /
   Archives: /archives/index.html
-  QuarkOS: /quarkos/index.html
 
 # links with icon in the left-column bar
 subnav:

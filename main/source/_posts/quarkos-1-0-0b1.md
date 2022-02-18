@@ -27,4 +27,4 @@ tags: QuarkOS
  $ rm /mnt/etc/resolv.conf
 ```
 ## 下载链接
-* [官方下载](https://nas.300c.top:5001/d/s/669359418875322391/ndjB7Eo7CCCjTt30iO-AIj9o7DvUPD0o-GCBgH.kKSgk_) 密码：quarkos
+* [官方下载]() 密码：quarkos
