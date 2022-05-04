@@ -3,17 +3,16 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "hexo generate",
-    "clean": "hexo clean",
-    "deploy": "hexo deploy",
-    "server": "hexo server"
+    "build": " hexo generate",
+    "clean": " hexo clean",
+    "deploy": " hexo deploy",
+    "server": " hexo server"
   },
   "hexo": {
-    "version": "6.0.0"
+    "version": "5.4.2"
   },
   "dependencies": {
-    "hexo": "^6.0.0",
-    "hexo-cli": "",
+    "hexo": "^5.4.2",
     "hexo-deployer-ftpsync": "git+https://gitee.com/qinyinan/hexo-deployer-ftpsync.git",
     "hexo-generator-archive": "",
     "hexo-generator-baidu-sitemap": "",
@@ -24,6 +23,6 @@
     "hexo-renderer-marked": "",
     "hexo-renderer-stylus": "",
     "hexo-server": "",
-    "hexo-theme-landscape": ""
+    "hexo-theme-landscape": "^0.0.3"
   }
 }
