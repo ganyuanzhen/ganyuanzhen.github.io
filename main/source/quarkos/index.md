@@ -1,4 +1,3 @@
----
 title: QuarkOS 主页
 date: 2022-02-11 12:05:21
 ---
@@ -15,6 +14,9 @@ QuarkOS的目标是尽可能是常用软件的安装更为便捷，满足日常�
     <ul><li><a herf="https://www.300c.top/2022/02/11/quarkos-1-0-0b1/index.html">beta1</a></li></ul>
     </li>
 </ul>
+
+## 状态
+* Deprecated! => 由于CutefishOS倒闭，本项目暂停开发~
 
 ## 友情链接
 
