@@ -2178,9 +2178,10 @@ hexo-cli@^4.0.0:
     resolve "^1.11.0"
     tildify "^2.0.0"
 
-"hexo-deployer-ftpsync@git+https://gitee.com/qinyinan/hexo-deployer-ftpsync.git":
+hexo-deployer-ftpsync@^0.1.1:
   version "0.1.1"
-  resolved "git+https://gitee.com/qinyinan/hexo-deployer-ftpsync.git#9e953bb2e4114c488229e52251ca61c90331684f"
+  resolved "https://packages.aliyun.com/61b0b1875676a35a3b7db451/npm/npm-registry/hexo-deployer-ftpsync/-/hexo-deployer-ftpsync-0.1.1.tgz#c9da5c0e90d0b298f24f8c294a087cb19bb7b6f8"
+  integrity sha512-sMgd9/GNxYMNDI0xp7cn2/OUX5Hc+RuBZrpUkEgtJv2L4jblt8UobZ6QQlCNzBu/PrUB4GVfXHEpVS+EZ8dXkg==
   dependencies:
     ftpsync "git+https://gitee.com/qinyinan/node-ftpsync.git"
 
