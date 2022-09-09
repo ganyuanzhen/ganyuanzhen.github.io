@@ -1870,9 +1870,10 @@ ftp@^0.3.10:
     readable-stream "1.1.x"
     xregexp "2.0.0"
 
-"ftpsync@git+https://gitee.com/qinyinan/node-ftpsync.git":
+ftpsync@^0.2.0:
   version "0.2.0"
-  resolved "git+https://gitee.com/qinyinan/node-ftpsync.git#e8c640534636566dde637f8ac97bdbfbaae21ceb"
+  resolved "https://packages.aliyun.com/61b0b1875676a35a3b7db451/npm/npm-registry/ftpsync/-/ftpsync-0.2.0.tgz#80788162545317d73f4444bea5f33b0f33f9d235"
+  integrity sha512-FMqEuRgGdcFLa+ULv3P21kCcabmMtO9sOYRNSJxJysdTXwCdnHc61jBYmUG8YMd+bECgIBsVZvY64DlTq6ekNg==
   dependencies:
     async "^1.5.1"
     commander "^2.9.0"
@@ -2178,12 +2179,12 @@ hexo-cli@^4.0.0:
     resolve "^1.11.0"
     tildify "^2.0.0"
 
-hexo-deployer-ftpsync@^0.1.1:
-  version "0.1.1"
-  resolved "https://packages.aliyun.com/61b0b1875676a35a3b7db451/npm/npm-registry/hexo-deployer-ftpsync/-/hexo-deployer-ftpsync-0.1.1.tgz#c9da5c0e90d0b298f24f8c294a087cb19bb7b6f8"
-  integrity sha512-sMgd9/GNxYMNDI0xp7cn2/OUX5Hc+RuBZrpUkEgtJv2L4jblt8UobZ6QQlCNzBu/PrUB4GVfXHEpVS+EZ8dXkg==
+hexo-deployer-ftpsync@^0.1.2:
+  version "0.1.2"
+  resolved "https://packages.aliyun.com/61b0b1875676a35a3b7db451/npm/npm-registry/hexo-deployer-ftpsync/-/hexo-deployer-ftpsync-0.1.2.tgz#986779953876cd5e53bb993b7458a8d099de20d5"
+  integrity sha512-Hxl/yOb9ltT6+5ItiPLeRNDco3+FM0ZZC7ugY9ugb8m9fjyTeVO38lG3rsHEyCpfF1/+EEUCSdsVUe7PPr/tFQ==
   dependencies:
-    ftpsync "git+https://gitee.com/qinyinan/node-ftpsync.git"
+    ftpsync "^0.2.0"
 
 hexo-front-matter@^0.2.2, hexo-front-matter@^0.2.3:
   version "0.2.3"
