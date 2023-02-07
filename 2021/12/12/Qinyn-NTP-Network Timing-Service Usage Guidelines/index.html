@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <style type="text/css">
+    .fullscreenvideo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+        -webkit-transition: 1s opacity;
+        transition: 1s opacity;
+    }
+     
+    .videocontainer{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: -100; 
+    }
+     
+    .videocontainer:before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: block;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        background: rgba(0,0,0,0);
+    }
+  </style>
+
+
+  
+  <title>Qinyn NTP (网络授时) 服务使用说明 | 秦以南</title>
+
+  <!-- keywords -->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="服务总览我们目前提供一台时间服务器： 1ntp.300c.top 服务器位于成都，提供 IPv4 服务。 服务介绍NTP (网络时间协议, network time protocol) 是网络中保持时间同步的协议 (How does it work)。简单来说，客户端通过向服务器发送带有时间戳的数据包和服务器回复带有时间戳的数据包，来获得客户端发送时间，服务端接收时间、服务端发送时间、客户端接收时">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Qinyn NTP (网络授时) 服务使用说明">
+<meta property="og:url" content="https://www.300c.top/2021/12/12/Qinyn-NTP-Network%20Timing-Service%20Usage%20Guidelines/index.html">
+<meta property="og:site_name" content="秦以南">
+<meta property="og:description" content="服务总览我们目前提供一台时间服务器： 1ntp.300c.top 服务器位于成都，提供 IPv4 服务。 服务介绍NTP (网络时间协议, network time protocol) 是网络中保持时间同步的协议 (How does it work)。简单来说，客户端通过向服务器发送带有时间戳的数据包和服务器回复带有时间戳的数据包，来获得客户端发送时间，服务端接收时间、服务端发送时间、客户端接收时">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-12-12T01:52:15.000Z">
+<meta property="article:modified_time" content="2023-01-29T11:29:16.023Z">
+<meta property="article:author" content="Qin Yinan">
+<meta property="article:tag" content="NTP">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternative" href="/atom.xml" title="秦以南" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+
+  
+<script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
+
+  
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+
+  
+<meta name="generator" content="Hexo 5.4.2"></head>
+<body>
+  <div class="videocontainer">
+    <video class="fullscreenvideo" playsinline="" autoplay="" muted="" loop="">
+    <source src="/img/bgvideo.13edb8ad.mp4" type="video/mp4"><!-- 在这改路径即可直接食用 -->
+    </video>
+    </div>
+  <div id="container">
+    <div id="particles-js"></div>
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+				<img lazy-src="/img/yande.re.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+			<h1 class="header-author"><a href="/">Qin Yinan</a></h1>
+		</hgroup>
+
+		
+			<p class="header-subtitle"></p>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">Home</a></li>
+				        
+							<li><a href="/archives/index.html">Archives</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="half-header-menu">
+						<a class="hide">Home</a>
+						<a>Tags</a>
+						<a>Links</a>
+						<a>About</a>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+						</div>
+						<!-- music -->
+						
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/Leeds/" style="font-size: 10px;">Leeds</a> <a href="/tags/NTP/" style="font-size: 10px;">NTP</a> <a href="/tags/New/" style="font-size: 10px;">New</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/QuarkOS/" style="font-size: 10px;">QuarkOS</a> <a href="/tags/Software/" style="font-size: 10px;">Software</a> <a href="/tags/Tools/" style="font-size: 10px;">Tools</a> <a href="/tags/git/" style="font-size: 10px;">git</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/">github</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">I&#39;m a developer.</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide"></h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="/img/yande.re.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author"></h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">Home</a></li>
+		        
+					<li><a href="/archives/index.html">Archives</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-Qinyn-NTP-Network Timing-Service Usage Guidelines" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2021/12/12/Qinyn-NTP-Network%20Timing-Service%20Usage%20Guidelines/" class="article-date">
+  	<time datetime="2021-12-12T01:52:15.000Z" itemprop="datePublished">2021-12-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Qinyn NTP (网络授时) 服务使用说明
+      
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NTP/" rel="tag">NTP</a></li></ul>
+	</div>
+
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="服务总览"><a href="#服务总览" class="headerlink" title="服务总览"></a>服务总览</h2><p>我们目前提供一台时间服务器：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ntp.300c.top</span><br></pre></td></tr></table></figure>
+<p>服务器位于成都，提供 IPv4 服务。</p>
+<h2 id="服务介绍"><a href="#服务介绍" class="headerlink" title="服务介绍"></a>服务介绍</h2><p>NTP (网络时间协议, network time protocol) 是网络中保持时间同步的协议 (How does it work)。简单来说，客户端通过向服务器发送带有时间戳的数据包和服务器回复带有时间戳的数据包，来获得客户端发送时间，服务端接收时间、服务端发送时间、客户端接收时间 4 个时间戳。客户端系统时间偏移量定义为 δ &#x3D; (t₃ - t₀) - (t₂ - t₁)。如果运行 ntpd 服务，一般来说 ntpd 会逐渐调整时钟，避免时间跳变。这对于运行计费系统、交易系统或者其他对时间准确性和事件先后顺序敏感的操作十分重要。</p>
+<h2 id="Linux-客户端配置"><a href="#Linux-客户端配置" class="headerlink" title="Linux 客户端配置"></a>Linux 客户端配置</h2><p>使用 <code>systemd-timesyncd </code>的用户需要修改 <code>/etc/systemd/timesyncd.conf</code>，将其中 <code>NTP=</code> 一行取消注释，修改为<code>NTP=ntp.300c.top</code>。修改好后，可使用 <code>systemctl restart systemd-timesyncd </code>使配置生效。</p>
+<p>使用 ntpd 的用户需要在<code> /etc/ntp.conf</code> 中添加一行 <code>server ntp.300c.top 。</code>（若您的发行版使用 Chrony，请修改对应的配置文件 <code>/etc/chrony.conf</code>。）</p>
+<p>为了确保 ntpd 服务正在运行，使用你的发行版的 <code>initscripts </code>脚本或 <code>systemctl</code>（若有）进行检查和修正。</p>
+<p>如果你的机器的时钟发生跳变不会有严重后果 (例如在你的笔记本上)，你可以使用 <code>sudo ntpdate ntp.300c.top </code>进行一次性的同步。</p>
+<h2 id="Mac-客户端配置"><a href="#Mac-客户端配置" class="headerlink" title="Mac 客户端配置"></a>Mac 客户端配置</h2><p>在“系统配置 &gt; 日期与时间 &gt; 自动设置日期与时间”一栏，填入 <code>ntp.300c.top</code>。</p>
+<p>在 macOS Mojave 及更新的系统，你可以使用 <code>sudo sntp -sS ntp.300c.top</code> 来进行一次性的同步，否则，使用<code>sudo ntpdate ntp.300c.top</code>进行同步。</p>
+<h2 id="Windows-客户端配置"><a href="#Windows-客户端配置" class="headerlink" title="Windows 客户端配置"></a>Windows 客户端配置</h2><p>Windows XP 及以下版本的配置方式可以参看上海大学 NTP 网站上提供的<a target="_blank" rel="noopener" href="http://cms.shu.edu.cn/Default.aspx?alias=cms.shu.edu.cn/ntp">教程</a>。</p>
+<h3 id="Windows-10-客户端配置"><a href="#Windows-10-客户端配置" class="headerlink" title="Windows 10 客户端配置"></a>Windows 10 客户端配置</h3><p>在“控制面板 &gt; 时钟、语言和区域 &gt; 日期和时间 &gt; Internet时间 &gt; 更改设置”中勾选“与 Internet 时间服务器同步”，在“服务器”一栏填入 <code>ntp.300c.top</code>。</p>
+<p>您也可以通过在命令提示符中使用 <code>w32tm /config /manualpeerlist:ntp.300c.top /syncfromflags:manual /update</code> 来将此服务器设置为您的时间服务器.</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2022/02/11/quarkos-1-0-0b1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">&lt;</strong>
+      <div class="article-nav-title">
+        
+          QuarkOS_1.0.0beta1 发行说明
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/12/09/Join%20the%20Jiaotong%20University%20Leeds%202021%20Telecom%20Git%20Library/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">加入交大利兹2021电信Git库~</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        <!-- &copy; 2023 Qin Yinan -->
+      </div>
+        <div class="footer-right">
+          <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn">ICP证：蜀ICP备2022002334号</a>
+          <a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"><img src="https://www.upyun.com/static/img/%E6%A0%B7%E5%BC%8F%E5%9B%BE.7cf927c.png" width="250px"></a>
+          <!--
+          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/preccrep/hexo-theme-jelly" target="_blank">Jelly</a>
+          -->
+          <a target="_blank" rel="noopener" href="https://www.beian.gov.cn/apply/staticWebInfo?token=07bb9342-6fd1-44ca-b14e-cf96976658a4&webSiteId=937466#minirecnum">川公网安备 51010702002713号</a>
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+
+<script src="/js/main.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

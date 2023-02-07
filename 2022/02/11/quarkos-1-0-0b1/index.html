@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <style type="text/css">
+    .fullscreenvideo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+        -webkit-transition: 1s opacity;
+        transition: 1s opacity;
+    }
+     
+    .videocontainer{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: -100; 
+    }
+     
+    .videocontainer:before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: block;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        background: rgba(0,0,0,0);
+    }
+  </style>
+
+
+  
+  <title>QuarkOS_1.0.0beta1 发行说明 | 秦以南</title>
+
+  <!-- keywords -->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="QuarkOS v1.0.0 beta1 发行说明说明这是QuarkOS的第一个发行版，基于Deepin v23与Debian bullseye制作。 内涵如下软件：  星火应用商店 微信 网易云音乐 Chromium  已知问题 在efi平台上安装需要使用ventoy制作启动盘，并且在安装成功后需要额外配置grub,此操作需要网络连接： 123456789$ for i in dev proc">
+<meta property="og:type" content="article">
+<meta property="og:title" content="QuarkOS_1.0.0beta1 发行说明">
+<meta property="og:url" content="https://www.300c.top/2022/02/11/quarkos-1-0-0b1/index.html">
+<meta property="og:site_name" content="秦以南">
+<meta property="og:description" content="QuarkOS v1.0.0 beta1 发行说明说明这是QuarkOS的第一个发行版，基于Deepin v23与Debian bullseye制作。 内涵如下软件：  星火应用商店 微信 网易云音乐 Chromium  已知问题 在efi平台上安装需要使用ventoy制作启动盘，并且在安装成功后需要额外配置grub,此操作需要网络连接： 123456789$ for i in dev proc">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-02-11T04:14:25.000Z">
+<meta property="article:modified_time" content="2023-01-29T11:29:16.024Z">
+<meta property="article:author" content="Qin Yinan">
+<meta property="article:tag" content="QuarkOS">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternative" href="/atom.xml" title="秦以南" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+
+  
+<script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
+
+  
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+
+  
+<meta name="generator" content="Hexo 5.4.2"></head>
+<body>
+  <div class="videocontainer">
+    <video class="fullscreenvideo" playsinline="" autoplay="" muted="" loop="">
+    <source src="/img/bgvideo.13edb8ad.mp4" type="video/mp4"><!-- 在这改路径即可直接食用 -->
+    </video>
+    </div>
+  <div id="container">
+    <div id="particles-js"></div>
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+				<img lazy-src="/img/yande.re.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+			<h1 class="header-author"><a href="/">Qin Yinan</a></h1>
+		</hgroup>
+
+		
+			<p class="header-subtitle"></p>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">Home</a></li>
+				        
+							<li><a href="/archives/index.html">Archives</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="half-header-menu">
+						<a class="hide">Home</a>
+						<a>Tags</a>
+						<a>Links</a>
+						<a>About</a>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+						</div>
+						<!-- music -->
+						
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/Leeds/" style="font-size: 10px;">Leeds</a> <a href="/tags/NTP/" style="font-size: 10px;">NTP</a> <a href="/tags/New/" style="font-size: 10px;">New</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/QuarkOS/" style="font-size: 10px;">QuarkOS</a> <a href="/tags/Software/" style="font-size: 10px;">Software</a> <a href="/tags/Tools/" style="font-size: 10px;">Tools</a> <a href="/tags/git/" style="font-size: 10px;">git</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/">github</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">I&#39;m a developer.</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide"></h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="/img/yande.re.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author"></h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">Home</a></li>
+		        
+					<li><a href="/archives/index.html">Archives</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-quarkos-1-0-0b1" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2022/02/11/quarkos-1-0-0b1/" class="article-date">
+  	<time datetime="2022-02-11T04:14:25.000Z" itemprop="datePublished">2022-02-11</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      QuarkOS_1.0.0beta1 发行说明
+      
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/QuarkOS/" rel="tag">QuarkOS</a></li></ul>
+	</div>
+
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="QuarkOS-v1-0-0-beta1-发行说明"><a href="#QuarkOS-v1-0-0-beta1-发行说明" class="headerlink" title="QuarkOS v1.0.0 beta1 发行说明"></a>QuarkOS v1.0.0 beta1 发行说明</h1><h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>这是QuarkOS的第一个发行版，基于Deepin v23与Debian bullseye制作。</p>
+<p>内涵如下软件：</p>
+<ul>
+<li>星火应用商店</li>
+<li>微信</li>
+<li>网易云音乐</li>
+<li>Chromium</li>
+</ul>
+<h2 id="已知问题"><a href="#已知问题" class="headerlink" title="已知问题"></a>已知问题</h2><ol>
+<li>在efi平台上安装需要使用ventoy制作启动盘，并且在安装成功后需要额外配置grub,此操作需要网络连接： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">for</span> i <span class="keyword">in</span> dev proc sys; <span class="keyword">do</span> mount --rbind /<span class="variable">$i</span> /mnt/<span class="variable">$i</span>; <span class="keyword">done</span></span><br><span class="line">$ <span class="built_in">cp</span> /etc/resolv.conf /mnt/etc/resolv.conf</span><br><span class="line">$ <span class="built_in">chroot</span> /mnt /bin/bash</span><br><span class="line">$(<span class="built_in">chroot</span>) apt purge grub-pc grub-efi grub-efi-amd64</span><br><span class="line">$(<span class="built_in">chroot</span>) <span class="built_in">rm</span> -r /boot/grub</span><br><span class="line">$(<span class="built_in">chroot</span>) apt install grub-efi-amd64</span><br><span class="line">$(<span class="built_in">chroot</span>) <span class="built_in">exit</span></span><br><span class="line">$ <span class="keyword">for</span> i <span class="keyword">in</span> dev/pts dev/ proc sys; <span class="keyword">do</span> umount -lf /mnt/<span class="variable">$i</span>; <span class="keyword">done</span></span><br><span class="line">$ <span class="built_in">rm</span> /mnt/etc/resolv.conf</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="下载链接"><a href="#下载链接" class="headerlink" title="下载链接"></a>下载链接</h2><ul>
+<li><a href="">官方下载</a> 密码：quarkos</li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2022/05/24/Python-Release/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">&lt;</strong>
+      <div class="article-nav-title">
+        
+          Python for Window 各版本安装包（包含Security Update）
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/12/12/Qinyn-NTP-Network%20Timing-Service%20Usage%20Guidelines/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Qinyn NTP (网络授时) 服务使用说明</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        <!-- &copy; 2023 Qin Yinan -->
+      </div>
+        <div class="footer-right">
+          <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn">ICP证：蜀ICP备2022002334号</a>
+          <a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"><img src="https://www.upyun.com/static/img/%E6%A0%B7%E5%BC%8F%E5%9B%BE.7cf927c.png" width="250px"></a>
+          <!--
+          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/preccrep/hexo-theme-jelly" target="_blank">Jelly</a>
+          -->
+          <a target="_blank" rel="noopener" href="https://www.beian.gov.cn/apply/staticWebInfo?token=07bb9342-6fd1-44ca-b14e-cf96976658a4&webSiteId=937466#minirecnum">川公网安备 51010702002713号</a>
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+
+<script src="/js/main.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
